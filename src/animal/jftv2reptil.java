@@ -9,14 +9,18 @@ package animal;
  * @author mauri
  */
 public class jftv2reptil extends javax.swing.JFrame {
-    
+    String c;
+    String v1;
+    animalBR objbr = new animalBR();
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(jftv2reptil.class.getName());
 
     /**
      * Creates new form jftv2reptil
      */
-    public jftv2reptil() {
+    public jftv2reptil(String vv1) {
+        v1 = vv1;
         initComponents();
+        reptil.setText("");
     }
 
     /**
@@ -28,28 +32,29 @@ public class jftv2reptil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        muda = new javax.swing.JCheckBox();
+        capa = new javax.swing.JCheckBox();
+        cola = new javax.swing.JCheckBox();
+        cabeza = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        reptil = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jCheckBox1.setText("Muda piel");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        muda.setText("Muda piel");
+        muda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                mudaActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("caparazon");
+        capa.setText("caparazon");
 
-        jCheckBox3.setText("Cola para nadar");
+        cola.setText("Cola para nadar");
 
-        jCheckBox4.setText("Cabeza de pico");
+        cabeza.setText("Cabeza de pico");
 
         jButton1.setText("Encadenar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +67,8 @@ public class jftv2reptil extends javax.swing.JFrame {
 
         jLabel1.setText("Vertebrado 2");
 
+        reptil.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -71,29 +78,32 @@ public class jftv2reptil extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jCheckBox3)
-                        .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jCheckBox2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jCheckBox4, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addComponent(cola)
+                        .addComponent(muda, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(capa, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cabeza, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reptil, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
+                    .addComponent(muda)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(capa)
+                    .addComponent(reptil))
                 .addGap(27, 27, 27)
-                .addComponent(jCheckBox3)
+                .addComponent(cola)
                 .addGap(29, 29, 29)
-                .addComponent(jCheckBox4)
+                .addComponent(cabeza)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
@@ -104,12 +114,36 @@ public class jftv2reptil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void mudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mudaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_mudaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        String mp = "", cpzn = "", cn = "", cp = "";
+        if (muda.isSelected()) {
+            mp = "si";
+        } else {
+            mp = "no";
+        }
+        if (capa.isSelected()) {
+            cpzn = "si";
+        } else {
+            cpzn = "no";
+        }
+        if (cola.isSelected()) {
+            cn = "si";
+        } else {
+            cn = "no";
+        }
+        if (cabeza.isSelected()) {
+            cp = "si";
+        } else {
+            cp = "no";
+        }
+        System.out.println("\nSC=" + mp + "\nPlumas=" + cpzn + "\nMetam=" + cn + "\nRB=" + cp);
+        c = objbr.getVertebrado2Reptil(v1,mp, cpzn, cn, cp);
+        System.out.println("V2=" + c);
+        reptil.setText(c);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -134,16 +168,17 @@ public class jftv2reptil extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new jftv2reptil().setVisible(true));
+        //java.awt.EventQueue.invokeLater(() -> new jftv2reptil().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox cabeza;
+    private javax.swing.JCheckBox capa;
+    private javax.swing.JCheckBox cola;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JCheckBox muda;
+    private javax.swing.JLabel reptil;
     // End of variables declaration//GEN-END:variables
 }

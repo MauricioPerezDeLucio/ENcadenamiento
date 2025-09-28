@@ -15,24 +15,25 @@ public class jftv1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        san = new javax.swing.JCheckBox();
+        plum = new javax.swing.JCheckBox();
+        meta = new javax.swing.JCheckBox();
+        reses = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        vertoso = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jCheckBox1.setText("Sangre caliente");
+        san.setText("Sangre caliente");
 
-        jCheckBox2.setText("Plumas");
+        plum.setText("Plumas");
 
-        jCheckBox3.setText("Metamorfosis");
+        meta.setText("Metamorfosis");
 
-        jCheckBox4.setText("Respiración branquial");
+        reses.setText("Respiración branquial");
 
         jButton1.setText("Encadenar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -42,7 +43,7 @@ public class jftv1 extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setText("Vertebrado1");
+        jLabel1.setText("Vertebrado 1");
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
@@ -60,10 +61,10 @@ public class jftv1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox4)
+                    .addComponent(plum)
+                    .addComponent(meta)
+                    .addComponent(san)
+                    .addComponent(reses)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jButton1)))
@@ -76,7 +77,11 @@ public class jftv1 extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(vertoso)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(67, 67, 67)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -85,18 +90,20 @@ public class jftv1 extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
+                        .addComponent(san)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox2)
+                        .addComponent(plum)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox3)
+                        .addComponent(meta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox4)
+                        .addComponent(reses)
                         .addGap(24, 24, 24))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(vertoso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(84, 84, 84)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -110,22 +117,22 @@ public class jftv1 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String ssc = "", sp = "", srb = "", sm = "";
-        if (jCheckBox1.isSelected()) {
+        if (san.isSelected()) {
             ssc = "si";
         } else {
             ssc = "no";
         }
-        if (jCheckBox2.isSelected()) {
+        if (plum.isSelected()) {
             sp = "si";
         } else {
             sp = "no";
         }
-        if (jCheckBox3.isSelected()) {
+        if (meta.isSelected()) {
             sm = "si";
         } else {
             sm = "no";
         }
-        if (jCheckBox4.isSelected()) {
+        if (reses.isSelected()) {
             srb = "si";
         } else {
             srb = "no";
@@ -144,7 +151,7 @@ public class jftv1 extends javax.swing.JFrame {
                 jfAve.setVisible(true);
             }
             else if (c.equals("REPTIL")){
-                jftv2reptil rep = new jftv2reptil();
+                jftv2reptil rep = new jftv2reptil(c);
                 rep.setVisible(true);
             }
         }
@@ -195,11 +202,12 @@ public class jftv1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JCheckBox meta;
+    private javax.swing.JCheckBox plum;
+    private javax.swing.JCheckBox reses;
+    private javax.swing.JCheckBox san;
+    private javax.swing.JLabel vertoso;
     // End of variables declaration//GEN-END:variables
 }

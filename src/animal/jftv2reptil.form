@@ -28,18 +28,19 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton1" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="cola" min="-2" max="-2" attributes="0"/>
+                      <Component id="muda" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="capa" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="cabeza" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" pref="99" max="-2" attributes="0"/>
+                  <Component id="reptil" alignment="0" pref="123" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -48,15 +49,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="muda" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="capa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="reptil" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+              <Component id="cola" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+              <Component id="cabeza" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jButton2" pref="35" max="32767" attributes="0"/>
@@ -68,25 +72,25 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+    <Component class="javax.swing.JCheckBox" name="muda">
       <Properties>
         <Property name="text" type="java.lang.String" value="Muda piel"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mudaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+    <Component class="javax.swing.JCheckBox" name="capa">
       <Properties>
         <Property name="text" type="java.lang.String" value="caparazon"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+    <Component class="javax.swing.JCheckBox" name="cola">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cola para nadar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+    <Component class="javax.swing.JCheckBox" name="cabeza">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cabeza de pico"/>
       </Properties>
@@ -107,6 +111,11 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Vertebrado 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="reptil">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
   </SubComponents>
