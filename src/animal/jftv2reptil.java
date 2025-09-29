@@ -4,6 +4,8 @@
  */
 package animal;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mauri
@@ -64,6 +66,11 @@ public class jftv2reptil extends javax.swing.JFrame {
         });
 
         jButton2.setText("Siguiente");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Vertebrado 2");
 
@@ -140,11 +147,28 @@ public class jftv2reptil extends javax.swing.JFrame {
         } else {
             cp = "no";
         }
-        System.out.println("\nSC=" + mp + "\nPlumas=" + cpzn + "\nMetam=" + cn + "\nRB=" + cp);
+        System.out.println("\nMuda piel=" + mp + "\nCaparazon="
+                + cpzn + "\nCola para nadar=" + cn + "\nCabeza de pico=" + cp);
         c = objbr.getVertebrado2Reptil(v1,mp, cpzn, cn, cp);
         System.out.println("V2=" + c);
         reptil.setText(c);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try{
+            if (c.equals("SQUAMATA")) {
+                jftv3squamata squa = new jftv3squamata(c);
+                squa.setVisible(true);
+            }
+            else if (c.equals("REPTIL")){
+            }
+        }
+        catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(this,
+                    "Verifica las entradas", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
