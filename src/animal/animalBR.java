@@ -207,6 +207,32 @@ public class animalBR {
         return svertebrado;
     }
     
+    public String getV5Micru(String v4, String cao, String am, String zmt, String em){
+        staterBR();
+        Verte4.setValue(v4);
+        cuelloAnchoOscuro.setValue(cao);
+        anillosMedianos.setValue(am);
+        zonaMontanosa.setValue(zmt);
+        endemicaMexico.setValue(em);
+        
+        br.forwardChain();
+        svertebrado = Verte5.getValue();
+        return svertebrado;
+    }
+    
+    public String getV5cach(String v4, String fd, String ar, String cl, String mca){
+        staterBR();
+        Verte4.setValue(v4);
+        delgada.setValue(fd);
+        arborea.setValue(ar);
+        colaLarga.setValue(cl);
+        marcasClarasAbdomen.setValue(mca);
+        
+        br.forwardChain();
+        svertebrado = Verte5.getValue();
+        return svertebrado;
+    }
+    
     public void staterBR() {
         //        instancias de variables de regla
         Sangrecaliente = new RuleVariable(br, "Sangrecaliente");
@@ -504,11 +530,11 @@ public class animalBR {
             new Clause(Verte4, igual,"OPHISAURUS"));
         
         //Vertebrado 4 (iguanidae)
-        Rule cachyx = new Rule(br, "CACHYX",
+        Rule cachyx = new Rule(br, "CACHRYX",
             new Clause[]{
                 new Clause(habitatArboreo,igual,"si"),
                 new Clause(capacidadNadar,igual,"no")},
-            new Clause(Verte4, igual, "CACHYX"));
+            new Clause(Verte4, igual, "CACHRYX"));
         Rule iguana = new Rule(br, "IGUANA",
             new Clause[]{
                 new Clause(habitatArboreo,igual,"si"),

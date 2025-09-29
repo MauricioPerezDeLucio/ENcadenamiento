@@ -157,7 +157,13 @@ public class jftv3squamata extends javax.swing.JFrame {
                 jftvanguidae ang = new jftvanguidae(c);
                 ang.setVisible(true);
             }
-            else if (c.equals("REPTIL")){
+            else if (c.equals("ELAPIDAE")){
+                v3ela ela = new v3ela(c);
+                ela.setVisible(true);
+            }
+            else if (c.equals("IGUANIDAE")){
+                v4Igua igua = new v4Igua(c);
+                igua.setVisible(true);
             }
         }
         catch (NullPointerException e) {
