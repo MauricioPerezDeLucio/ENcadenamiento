@@ -7,6 +7,21 @@ public class animalBR {
     //    declaracion de base de reglas
     BooleanRuleBase br = new BooleanRuleBase("test");
     //    declaracion de variables de regla
+    
+    RuleVariable autotrofo;
+    RuleVariable heterotrofo;
+    RuleVariable pluricel;
+    RuleVariable unicel;
+    RuleVariable repSexual;
+    
+    RuleVariable simetriaBili;
+    RuleVariable sistemaCircu;
+    RuleVariable exoesque;
+    RuleVariable segmenta;
+    RuleVariable cutiflex;
+    RuleVariable probrectra;
+    
+    
     RuleVariable Sangrecaliente;
     RuleVariable Plumas;
     RuleVariable Metamorfosis;
@@ -27,6 +42,9 @@ public class animalBR {
     RuleVariable tercOjoPar;
     RuleVariable lenguaBifi;
     
+    RuleVariable reino;
+    RuleVariable filo;
+    RuleVariable clase;
     RuleVariable Vertebrado1;
     RuleVariable Vertebrado2;
     RuleVariable Verte3;
@@ -77,11 +95,43 @@ public class animalBR {
 
     public void BaseReglas() {
     }
+    
+    public String getReino(String au, String he, String plu,String uni, String repro){
+        staterBR();
+        autotrofo.setValue(au);
+        heterotrofo.setValue(he);
+        pluricel.setValue(plu);
+        unicel.setValue(uni);
+        repSexual.setValue(repro);
+        
+        br.forwardChain();
+        svertebrado = Vertebrado1.getValue();
+        return svertebrado;
+    }
+    
+    public String geFilo1(String r,String sib, String sc,
+        String exo, String seg,
+        String cf, String pr) {
+        staterBR();
+        reino.setValue(r);
+        simetriaBili.setValue(sib);
+        sistemaCircu.setValue(sc);
+        exoesque.setValue(exo);
+        segmenta.setValue(seg);
+        cutiflex.setValue(cf);
+        probrectra.setValue(pr);
 
-    public String getVertebrado1(String sangrecaliente,
+        br.forwardChain();
+        svertebrado = Vertebrado1.getValue();
+
+        return svertebrado;
+    }
+    
+    public String getVertebrado1(String cl, String sangrecaliente,
         String plumas, String respiracionbranquial,
         String metamorfosis) {
         staterBR();
+        clase.setValue(cl);
         Sangrecaliente.setValue(sangrecaliente);
         Plumas.setValue(plumas);
         Respiracionbranquial.setValue(respiracionbranquial);
@@ -243,6 +293,9 @@ public class animalBR {
         Corre= new RuleVariable(br, "Corre");
         Vuela= new RuleVariable(br, "Vuela");
         
+        reino= new RuleVariable(br, "Reino");
+        filo= new RuleVariable(br, "Filo");
+        clase= new RuleVariable(br, "Clase");
         Vertebrado1 = new RuleVariable(br, "Vertebrado1");
         Vertebrado2 = new RuleVariable(br, "Vertebrado2");
         Verte3 = new RuleVariable(br, "Vertebrado3");
@@ -297,10 +350,141 @@ public class animalBR {
         caparazonBordesCerrados = new RuleVariable(br, "Caparazon con bordes cerrados");
         granTamano = new RuleVariable(br, "Gran tamano");
         
+        autotrofo = new RuleVariable(br, "Autotrofo");
+        heterotrofo = new RuleVariable(br, "Heterotrofo");
+        pluricel = new RuleVariable(br, "Pluricelular");
+        unicel = new RuleVariable(br, "Unicelular");
+        repSexual = new RuleVariable(br, "Reproduccion sexual");
+    
+        simetriaBili = new RuleVariable(br, "Simetria biliteral");
+        sistemaCircu = new RuleVariable(br, "Sistema circulatorio");
+        exoesque = new RuleVariable(br, "Exoesqueleto");
+        segmenta = new RuleVariable(br, "Segmentacion");
+        cutiflex = new RuleVariable(br, "Cuticula flexible");
+        probrectra = new RuleVariable(br, "Proboscide retractil");
+        
         //        definicion de operadores logicos (condicionales)
         Condition igual = new Condition("=");
 
         //        creacion de reglas de validacion (Base de Reglas)
+        
+        //animales
+        Rule plantae = new Rule(br, "PLANTAE",
+            new Clause[]{
+                new Clause(autotrofo,igual,"si"),
+                new Clause(heterotrofo, igual, "no"),
+                new Clause(pluricel, igual, "si"),
+                new Clause(unicel, igual, "no"),
+                new Clause(repSexual, igual, "si")},
+            new Clause(reino,igual,"PLANTAE"));
+        Rule fungi = new Rule(br, "FUNGI",
+            new Clause[]{
+                new Clause(autotrofo,igual,"no"),
+                new Clause(heterotrofo, igual, "si"),
+                new Clause(pluricel, igual, "si"),
+                new Clause(unicel, igual, "si"),
+                new Clause(repSexual, igual, "si")},
+            new Clause(reino,igual,"FUNGI"));
+        
+        Rule animalia = new Rule(br, "ANIMALIA",
+            new Clause[]{
+                new Clause(autotrofo,igual,"no"),
+                new Clause(heterotrofo, igual, "si"),
+                new Clause(pluricel, igual, "si"),
+                new Clause(unicel, igual, "no"),
+                new Clause(repSexual, igual, "si")},
+            new Clause(reino,igual,"ANIMALIA"));
+        
+        Rule protista = new Rule(br, "PROTISTA",
+            new Clause[]{
+                new Clause(autotrofo,igual,"si"),
+                new Clause(heterotrofo, igual, "si"),
+                new Clause(pluricel, igual, "no"),
+                new Clause(unicel, igual, "si"),
+                new Clause(repSexual, igual, "si")},
+            new Clause(reino,igual,"PROTISTA"));
+        Rule monera = new Rule(br, "MONERA",
+            new Clause[]{
+                new Clause(autotrofo,igual,"si"),
+                new Clause(heterotrofo, igual, "si"),
+                new Clause(pluricel, igual, "no"),
+                new Clause(unicel, igual, "si"),
+                new Clause(repSexual, igual, "no")},
+            new Clause(reino,igual,"MONERA"));
+        
+        Rule placoza = new Rule(br, "PLACOZA",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"no"),
+                new Clause(sistemaCircu,igual,"no"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"no"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "PLACOZA"));
+        Rule arthropoda = new Rule(br, "ARTHROPODA",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"si"),
+                new Clause(sistemaCircu,igual,"si"),
+                new Clause(exoesque,igual,"si"),
+                new Clause(segmenta,igual,"si"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "ARTHROPODA"));
+        Rule mollusca = new Rule(br, "MOLLUSCA",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"si"),
+                new Clause(sistemaCircu,igual,"si"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"no"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "MOLLUSCA"));
+        Rule chordata = new Rule(br, "CHORDATA",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"si"),
+                new Clause(sistemaCircu,igual,"si"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"si"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "CHORDATA"));
+        Rule echinodermata = new Rule(br, "ECHINODERMATA",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"no"),
+                new Clause(sistemaCircu,igual,"si"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"no"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "ECHINODERMATA"));
+        Rule nematoda = new Rule(br, "NEMATODA",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"si"),
+                new Clause(sistemaCircu,igual,"no"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"no"),
+                new Clause(cutiflex,igual,"si"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "NEMATODA"));
+        Rule rotiferos = new Rule(br, "ROTIFEROS",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"si"),
+                new Clause(sistemaCircu,igual,"no"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"no"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"no")},
+            new Clause(filo, igual, "ROTIFEROS"));
+        Rule simpunculidos = new Rule(br, "SIMPUNCULIDOS",
+            new Clause[]{
+                new Clause(simetriaBili,igual,"si"),
+                new Clause(sistemaCircu,igual,"no"),
+                new Clause(exoesque,igual,"no"),
+                new Clause(segmenta,igual,"no"),
+                new Clause(cutiflex,igual,"no"),
+                new Clause(probrectra,igual,"si")},
+            new Clause(filo, igual, "SINPUNCULIDOS"));
+        
         // VERTEBRADOS 1   
         Rule ave = new Rule(br, "AVE",
                 new Clause[]{new Clause(Sangrecaliente, igual, "si"),
