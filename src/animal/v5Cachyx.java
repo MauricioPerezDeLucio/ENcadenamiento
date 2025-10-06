@@ -22,7 +22,7 @@ public class v5Cachyx extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         verte = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         delga.setText("Forma delgada");
 

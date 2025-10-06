@@ -5,9 +5,11 @@ import javax.swing.JOptionPane;
 public class jftv1 extends javax.swing.JFrame {
 
     String c;
+    String v1;
     animalBR objbr = new animalBR();
 
-    public jftv1() {
+    public jftv1(String vv1) {
+        v1 = vv1;
         initComponents();
     }
    
@@ -25,7 +27,7 @@ public class jftv1 extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         vertoso = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         san.setText("Sangre caliente");
 
@@ -138,7 +140,7 @@ public class jftv1 extends javax.swing.JFrame {
             srb = "no";
         }
         System.out.println("\nSC=" + ssc + "\nPlumas=" + sp + "\nMetam=" + sm + "\nRB=" + srb);
-        c = objbr.getVertebrado1(ssc, sp, srb, sm);
+        c = objbr.getVertebrado1(v1,ssc, sp, srb, sm);
         System.out.println("V1=" + c);
         jLabel2.setText(c);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -162,42 +164,6 @@ public class jftv1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-
-    
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jftv1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jftv1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jftv1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jftv1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new jftv1().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

@@ -24,7 +24,7 @@ public class v4Micru extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         verte = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cuello.setText("Cuello ancho y oscuro");
 

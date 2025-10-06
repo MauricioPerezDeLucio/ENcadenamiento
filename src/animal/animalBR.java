@@ -105,7 +105,7 @@ public class animalBR {
         repSexual.setValue(repro);
         
         br.forwardChain();
-        svertebrado = Vertebrado1.getValue();
+        svertebrado = reino.getValue();
         return svertebrado;
     }
     
@@ -122,7 +122,7 @@ public class animalBR {
         probrectra.setValue(pr);
 
         br.forwardChain();
-        svertebrado = Vertebrado1.getValue();
+        svertebrado = filo.getValue();
 
         return svertebrado;
     }
@@ -414,6 +414,7 @@ public class animalBR {
         
         Rule placoza = new Rule(br, "PLACOZA",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"no"),
                 new Clause(sistemaCircu,igual,"no"),
                 new Clause(exoesque,igual,"no"),
@@ -423,6 +424,7 @@ public class animalBR {
             new Clause(filo, igual, "PLACOZA"));
         Rule arthropoda = new Rule(br, "ARTHROPODA",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"si"),
                 new Clause(sistemaCircu,igual,"si"),
                 new Clause(exoesque,igual,"si"),
@@ -432,6 +434,7 @@ public class animalBR {
             new Clause(filo, igual, "ARTHROPODA"));
         Rule mollusca = new Rule(br, "MOLLUSCA",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"si"),
                 new Clause(sistemaCircu,igual,"si"),
                 new Clause(exoesque,igual,"no"),
@@ -441,6 +444,7 @@ public class animalBR {
             new Clause(filo, igual, "MOLLUSCA"));
         Rule chordata = new Rule(br, "CHORDATA",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"si"),
                 new Clause(sistemaCircu,igual,"si"),
                 new Clause(exoesque,igual,"no"),
@@ -450,6 +454,7 @@ public class animalBR {
             new Clause(filo, igual, "CHORDATA"));
         Rule echinodermata = new Rule(br, "ECHINODERMATA",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"no"),
                 new Clause(sistemaCircu,igual,"si"),
                 new Clause(exoesque,igual,"no"),
@@ -459,6 +464,7 @@ public class animalBR {
             new Clause(filo, igual, "ECHINODERMATA"));
         Rule nematoda = new Rule(br, "NEMATODA",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"si"),
                 new Clause(sistemaCircu,igual,"no"),
                 new Clause(exoesque,igual,"no"),
@@ -468,6 +474,7 @@ public class animalBR {
             new Clause(filo, igual, "NEMATODA"));
         Rule rotiferos = new Rule(br, "ROTIFEROS",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"si"),
                 new Clause(sistemaCircu,igual,"no"),
                 new Clause(exoesque,igual,"no"),
@@ -477,6 +484,7 @@ public class animalBR {
             new Clause(filo, igual, "ROTIFEROS"));
         Rule simpunculidos = new Rule(br, "SIMPUNCULIDOS",
             new Clause[]{
+                new Clause(reino, igual,"ANIMALIA"),
                 new Clause(simetriaBili,igual,"si"),
                 new Clause(sistemaCircu,igual,"no"),
                 new Clause(exoesque,igual,"no"),
@@ -537,13 +545,13 @@ public class animalBR {
                 new Clause(colaNadar, igual, "no"),
                 new Clause(cabezaPico, igual, "no")},
             new Clause(Vertebrado2, igual,"SQUAMATA"));
-        Rule quelonia = new Rule(br, "QUELONIA",
+        Rule quelonia = new Rule(br, "TESTUDINES",
             new Clause[]{new Clause(Vertebrado1, igual,"REPTIL"),
                 new Clause(mudaPiel, igual, "no"),
                 new Clause(caparazon, igual, "si"),
                 new Clause(colaNadar, igual, "no"),
                 new Clause(cabezaPico, igual, "no")},
-            new Clause(Vertebrado2, igual,"QUELONIA"));
+            new Clause(Vertebrado2, igual,"TESTUDINES"));
         Rule cocodrilia = new Rule(br, "COCODRILIA",
             new Clause[]{new Clause(Vertebrado1, igual,"REPTIL"),
                 new Clause(mudaPiel, igual, "no"),

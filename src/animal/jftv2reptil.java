@@ -43,7 +43,7 @@ public class jftv2reptil extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         reptil = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         muda.setText("Muda piel");
         muda.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +160,7 @@ public class jftv2reptil extends javax.swing.JFrame {
                 jftv3squamata squa = new jftv3squamata(c);
                 squa.setVisible(true);
             }
-            else if (c.equals("QUELONIA")){
+            else if (c.equals("TESTUDINES")){
                 v3Testu testu = new v3Testu(c);
                 testu.setVisible(true);
             }

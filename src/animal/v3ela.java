@@ -35,7 +35,7 @@ public class v3ela extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         verte = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         haba.setText("Hábitat acuático");
 

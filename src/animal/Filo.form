@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -26,22 +26,24 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="caparazon" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="terrestre" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="amniota" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="medusas" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="simetria" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="sistema" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="exoes" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="segmen" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="cutiflex" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="probosc" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace pref="101" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="verte" min="-2" max="-2" attributes="0"/>
+                  <Component id="filo" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,58 +51,68 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="simetria" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="caparazon" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sistema" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="filo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="terrestre" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Component id="verte" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="amniota" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="medusas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="exoes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="segmen" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="cutiflex" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="probosc" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JCheckBox" name="caparazon">
+    <Component class="javax.swing.JCheckBox" name="simetria">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Caparaz&#xf3;n &#xd3;seo"/>
+        <Property name="text" type="java.lang.String" value="Simetr&#xed;a bilateral"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="terrestre">
+    <Component class="javax.swing.JCheckBox" name="sistema">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Terrestre"/>
+        <Property name="text" type="java.lang.String" value="Sistema circulatorio"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="amniota">
+    <Component class="javax.swing.JCheckBox" name="exoes">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Amniota"/>
+        <Property name="text" type="java.lang.String" value="Exoesqueleto"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="medusas">
+    <Component class="javax.swing.JCheckBox" name="segmen">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Alimentaci&#xf3;n especializada en medusas"/>
+        <Property name="text" type="java.lang.String" value="Segmentaci&#xf3;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="cutiflex">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cut&#xed;cula flexible"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="probosc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Prob&#xf3;scide retr&#xe1;ctil"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Siguiente"/>
+        <Property name="text" type="java.lang.String" value="Encadenar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -108,7 +120,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Encadenar"/>
+        <Property name="text" type="java.lang.String" value="Siguiente"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -116,10 +128,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Vertebrado 4"/>
+        <Property name="text" type="java.lang.String" value="Filo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="verte">
+    <Component class="javax.swing.JLabel" name="filo">
     </Component>
   </SubComponents>
 </Form>

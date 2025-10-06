@@ -24,7 +24,7 @@ public class v4testu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         herbi.setText("Herbívora");
 
@@ -79,9 +79,9 @@ public class v4testu extends javax.swing.JFrame {
                     .addComponent(herbi)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(capa)
-                    .addComponent(jLabel3))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(capa))
                 .addGap(18, 18, 18)
                 .addComponent(granTa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

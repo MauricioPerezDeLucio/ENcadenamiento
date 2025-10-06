@@ -42,7 +42,7 @@ public class jftv3squamata extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         vertes = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cuerPata.setText("Cuerpo con patas");
         cuerPata.addActionListener(new java.awt.event.ActionListener() {
